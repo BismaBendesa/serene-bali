@@ -8,7 +8,7 @@
   <title>Landing Page</title>
 </head>
 <body>
-  <h1 class="text-3xl font-bold underline">
+  <h1 class="text-3xl font-bold underline font-poppins">
     This is landing page
   </h1>
 </body>
