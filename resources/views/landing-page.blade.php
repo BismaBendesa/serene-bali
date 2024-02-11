@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="csrf-token" content="{{ csrf_token() }}">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   @vite('resources/css/app.css')
   <title>Landing Page</title>
 </head>
@@ -43,6 +45,52 @@
     <a href="" class="text-base active:font-bold focus:font-bold focus:underline focus:underline-offset-2 transition-all delay-50 h-9">FAQs</a>
   </nav>
   {{-- end header --}}
+
+  {{-- start search-section --}}
+  <div class="search-section md:pt-20 md:px-16 md:py-5 py-4 px-8">
+    <h1>Buy & Rent Villa Properties With Serene Bali</h1>
+    <p>We are property agency startup that provides best service.</p>
+    {{-- we need to make this search bar as a component maybe --}}
+    <div class="search-bar">
+      <form action="">
+        <div class="input-form">
+          <label for="action">Action</label>
+          <select name="action" id="action">
+            <option value="Buy">Buy</option>
+            <option value="Rent">Rent</option>
+            <option value="Rent">Sell</option>
+          </select>
+        </div>
+        <div class="input-form">
+          <label for="type">Type</label>
+          <select name="type" id="type">
+            <option value="Villa">Villa</option>
+            <option value="Land">Land</option>
+            <option value="Homestay">Homestay</option>
+          </select>
+        </div>
+        <div class="input-form">
+          <label for="location">Location</label>
+          <input type="text" id="location" name="location">
+        </div>
+        <div class="input-form">
+          <label for="location">Budget</label>
+          <select name="location" id="location">
+            <option value="<$1000">Less $1000</option>
+            <option value="$1000-$2000">$1000 - $2000</option>
+            <option value="$2000-5000">$2000 - $5000</option>
+            <option value=">$5000">Over $5000</option>
+          </select>
+        </div>
+        <button type="submit">Search <span class="material-symbols-rounded">
+          search
+          </span>
+        </button>
+      </form>
+    </div>
+  </div>
+  {{-- end search-section --}}
+
   <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>
