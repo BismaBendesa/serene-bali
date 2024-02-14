@@ -9,7 +9,7 @@
   @vite('resources/css/app.css')
   <title>Landing Page</title>
 </head>
-<body class="font-poppins m-auto">
+<body class="font-poppins m-auto bg-[#EAEAEA]">
   {{-- start header --}}
   <header class="flex items-center justify-between w-full md:px-16 md:py-5 py-4 px-8 fixed z-50 bg-white md:left-0 md:right-0 m-auto max-w-[1920px] ">
     <div class="logo flex items-center md:gap-4 gap-2">
@@ -51,7 +51,7 @@
     <h1 class="text-white font-bold text-center m-auto text-xl md:text-5xl md:mt-16 md:max-w-[850px] md:leading-normal ">Buy & Rent Villa Properties With Serene Bali</h1>
     <p class="text-white text-center text-xs m-auto mt-2 md:text-xl md:mt-6">We are property agency startup that provides best service.</p>
     {{-- we need to make this search bar as a component maybe --}}
-    <div class="search-bar bg-[#EAE6E3] max-w-[1060px] px-5 py-5 mt-8 rounded-lg md:px-8 md:py-8 md:rounded  mx-auto md:mt-16">
+    <div class="search-bar bg-[#EAE6E3] max-w-[1060px] px-5 py-5 mt-8 rounded-lg md:px-8 md:py-8 md:rounded  mx-auto md:mt-16 md:shadow-xl shadow-lg">
       <form action="" class="flex flex-col justify-center gap-3 md:gap-6 md:flex-row  md:items-end">
         <div class="input-form flex flex-col gap-2 relative after:content-['▼'] after:right-4 after:top-9 text-sm md:after:text-base md:after:top-12 md:after:right-3 after:absolute z-0">
           <label for="action" class="text-[#5F5E5E] font-medium text-sm md:text-base md:text-black">Action</label>
@@ -83,7 +83,7 @@
           </select>
         </div>
         {{-- might need to add component to the button --}}
-        <button type="submit" class="flex items-center justify-center bg-[#182955] text-white gap-2 px-4 py-3 max-h-12 rounded-lg mt-3 text-sm md:text-base">Search <span class="material-symbols-rounded text-white md:mt-0 text-sm md:text-base">
+        <button type="submit" class="flex items-center justify-center bg-[#182955] text-white gap-2 px-4 py-3 max-h-12 rounded-lg mt-3 text-sm md:text-base active:translate-y-0.5">Search <span class="material-symbols-rounded text-white md:mt-0 text-sm md:text-base">
           search
           </span>
         </button>
@@ -91,6 +91,46 @@
     </div>
   </div>
   {{-- end search-section --}}
+
+  {{-- start our service --}}
+  <div class="our-service grid md:grid-cols-2 grid-cols-1 md:mt-48 mt-[350px] px-8 md:px-16 md:gap-x-32 md:gap-y-0 gap-y-6 max-w-[1920px] m-auto">
+    <div class="service">
+      <h1 class="font-georgia md:text-6xl text-3xl uppercase md:mb-8 mb-4">Our service</h1>
+      <p class="md:text-base text-xs md:mb-6 mb-4 md:leading-8 leading-6">Serene Bali Offers many service that will help you find your dream house in Bali. We offers the villa with many concept that you wish. Our agent always ready to help you with your problem and will come up to a brilliant solution to guide you through your journey finding your dream house.</p>
+      <p class="md:text-base text-xs md:leading-8 leading-6">Serene Bali Offers many service that will help you find your dream house in Bali. We offers the villa with many concept that you wish. Serene Bali Offers many service that will help you find your dream house in Bali. We offers the villa with many concept that you wish. </p>
+    </div>
+    <div class="menus grid grid-cols-1 gap-y-3 md:gap-y-3">
+      <div class="service-menu flex items-center justify-between rounded-lg md:basis-full w-full bg-[#EAE6E3] md:px-6 md:py-6 px-4 py-4 shadow-md ">
+        <div class="service-text">
+          <h3 class="font-medium text-base md:text-xl">1. Rent Villas</h3>
+          <p class="text-xs md:text-base md:mt-2 mt-1">Some text with crispy details</p>
+        </div>
+        <a href="javascript:void(0)" class="bg-[#182955] text-white gap-2 px-4 py-2 rounded-lg mt-3 text-sm md:text-base"><button>Go</button></a>
+      </div>
+      <div class="service-menu flex items-center justify-between rounded-lg md:basis-full w-full bg-[#EAE6E3] md:px-6 md:py-6 px-4 py-4 shadow-md ">
+        <div class="service-text">
+          <h3 class="font-medium text-base md:text-xl">2. Buy Properties</h3>
+          <p class="text-xs md:text-base md:mt-2 mt-1">Some text with crispy details</p>
+        </div>
+        <a href="javascript:void(0)" class="bg-[#182955] text-white gap-2 px-4 py-2 rounded-lg mt-3 text-sm md:text-base"><button>Go</button></a>
+      </div>
+      <div class="service-menu flex items-center justify-between rounded-lg md:basis-full w-full bg-[#EAE6E3] md:px-6 md:py-6 px-4 py-4 shadow-md ">
+        <div class="service-text">
+          <h3 class="font-medium text-base md:text-xl">3. Consultation</h3>
+          <p class="text-xs md:text-base md:mt-2 mt-1">Some text with crispy details</p>
+        </div>
+        <a href="javascript:void(0)" class="bg-[#182955] text-white gap-2 px-4 py-2 rounded-lg mt-3 text-sm md:text-base"><button>Go</button></a>
+      </div>
+      <div class="service-menu flex items-center justify-between rounded-lg md:basis-full w-full bg-[#EAE6E3] md:px-6 md:py-6 px-4 py-4 shadow-md ">
+        <div class="service-text">
+          <h3 class="font-medium text-base md:text-xl">4. Manage Properties</h3>
+          <p class="text-xs md:text-base md:mt-2 mt-1">Some text with crispy details</p>
+        </div>
+        <a href="javascript:void(0)" class="bg-[#182955] text-white gap-2 px-4 py-2  rounded-lg mt-3 text-sm md:text-base"><button>Go</button></a>
+      </div>
+    </div>
+  </div>
+  {{-- end our service --}}
 
   <script src="{{ asset('js/app.js') }}"></script>
 </body>
