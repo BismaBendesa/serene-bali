@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const rectBot = document.getElementById("rect-bottom");
     let click = 0;
     const accordions = document.querySelector(".faqs-accordions");
+    const profilePic = document.getElementById("profileNav");
 
     burgerMenu.addEventListener("click", () => {
         if (click % 2 == 0) {
@@ -41,6 +42,14 @@ document.addEventListener("DOMContentLoaded", () => {
             e.target.classList.toggle("dark:text-black");
             e.target.classList.toggle("dark:text-gray-400");
         }
+    });
+
+    profilePic.addEventListener("click", (e) => {
+        let dropdown;
+        dropdown = document.querySelector("#profileDrop");
+        // dropdown.classList.toggle("hidden");
+        dropdown.classList.toggle("md:hidden");
+        console.log(dropdown);
     });
 });
 

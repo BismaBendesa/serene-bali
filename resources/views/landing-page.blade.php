@@ -1,60 +1,12 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="csrf-token" content="{{ csrf_token() }}">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
-  @vite('resources/css/app.css')
-  <title>Landing Page</title>
-</head>
-<body class="font-poppins m-auto bg-[#EAEAEA]">
-  {{-- start header --}}
-  <header class="flex items-center justify-between w-full md:px-16 md:py-5 py-4 px-8 fixed z-50 bg-white md:left-0 md:right-0 m-auto max-w-[1920px] ">
-    <div class="logo flex items-center md:gap-4 gap-2">
-      <img src="{{URL('storage/serene-bali-logo-black.png')}}" alt="Serene Bali Logo" class="md:w-[19px] w-[14px]">
-      <a href="" class="md:text-base text-sm"><span class="font-bold">S E R E N E</span> <span class="font-light">Bali</span></a>
-    </div>
-    {{-- Desktop nav --}}
-    <nav class="gap-14 md:flex hidden md:gap-8">
-      <a href="javascript:void(0)" class="text-base hover:font-bold transition-all delay-50">Buy</a>
-      <a href="javascript:void(0)" class="text-base hover:font-bold transition-all delay-50">Rent</a>
-      <a href="javascript:void(0)" class="text-base hover:font-bold transition-all delay-50">Consultation</a>
-      <a href="#about-us" class="text-base hover:font-bold transition-all delay-50">About</a>
-      <a href="#faqs" class="text-base hover:font-bold transition-all delay-50">FAQs</a>
-    </nav>
-    {{-- maybe we need to know how to make this button as component --}}
-    <button class="border border-black rounded-3xl px-6 py-2 font-medium text-base hover:bg-black hover:text-white transition-colors delay-50 md:block hidden">Sign Up</button> 
-    <div class="block md:hidden cursor-pointer" id="burgerButton">
-      <svg width="32" height="16" viewBox="-10 0 32 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect width="32" height="4" rx="2" fill="black" id="rect-top" class="transition duration-500"/>
-        <rect y="12" width="32" height="4" rx="2" fill="black" id="rect-bottom" class="transition duration-500"/>
-        {{-- -translate-y-1 rotate-45  --}}
-        {{-- translate-y-1.5 -translate-x-2 -rotate-45  --}}
-        {{-- viewBox="-5 0 32 16" --}}
-      </svg>
-    </div>
-  </header>
-  {{-- mobile nav --}}
-  <nav class="flex md:hidden gap-4 flex-col fixed left-0 right-0 py-4 px-8 bg-gray-200 transition -translate-y-72 duration-500 z-10 top-14" id="mobileMenu">
-    <a href="" class="text-base active:font-bold focus:font-bold focus:underline focus:underline-offset-2 transition-all delay-50 h-9">Buy</a>
-    <a href="" class="text-base active:font-bold focus:font-bold focus:underline focus:underline-offset-2 transition-all delay-50 h-9">Rent</a>
-    <a href="" class="text-base active:font-bold focus:font-bold focus:underline focus:underline-offset-2 transition-all delay-50 h-9">Consultation</a>
-    <a href="" class="text-base active:font-bold focus:font-bold focus:underline focus:underline-offset-2 transition-all delay-50 h-9">About</a>
-    <a href="" class="text-base active:font-bold focus:font-bold focus:underline focus:underline-offset-2 transition-all delay-50 h-9">FAQs</a>
-  </nav>
-  {{-- end header --}}
-
-  {{-- start search-section --}}
-  <div class="search-section pt-20 px-8 max-h-[320px] md:py-5 md:pt-20 md:max-h-[450px] bg-no-repeat bg-cover w-full max-w-[1920px] m-auto" style="background-image:url({{asset('storage/hero-image.png')}})">
-    <h1 class="text-white font-bold text-center m-auto text-xl md:text-5xl md:mt-16 md:max-w-[850px] md:leading-normal ">Buy & Rent Villa Properties With Serene Bali</h1>
-    <p class="text-white text-center text-xs m-auto mt-2 md:text-xl md:mt-6">We are property agency startup that provides best service.</p>
+<x-landing-page-layout>
+   {{-- start search-section --}}
+   <div class="search-section pt-20 px-8 max-h-[320px] md:py-5 md:pt-20 md:max-h-[450px] bg-no-repeat bg-cover w-full max-w-[1920px] m-auto" style="background-image:url({{asset('storage/hero-image.png')}})">
+    <h1 class="text-white font-bold text-center m-auto text-xl md:text-5xl md:mt-16 md:max-w-[850px] md:leading-normal min-[500px]:text-2xl">Buy & Rent Villa Properties With Serene Bali</h1>
+    <p class="text-white text-center text-xs m-auto mt-2 md:text-xl md:mt-6 min-[500px]:text-md">We are property agency startup that provides best service.</p>
     {{-- we need to make this search bar as a component maybe --}}
-    <div class="search-bar bg-[#EAE6E3] max-w-[1060px] px-5 py-5 mt-8 rounded-lg md:px-8 md:py-8 md:rounded  mx-auto md:mt-16 md:shadow-xl shadow-lg">
-      <form action="" class="flex flex-col justify-center gap-3 md:gap-6 md:flex-row  md:items-end">
-        <div class="input-form flex flex-col gap-2 relative after:content-['▼'] after:right-4 after:top-9 text-sm md:after:text-base md:after:top-12 md:after:right-3 after:absolute z-0">
+    <div class="search-bar bg-[#EAE6E3] min-[1115px]:max-w-[1060px] px-5 py-5 mt-8 rounded-lg md:px-8 md:py-8 md:rounded  mx-auto md:mt-16 md:shadow-xl shadow-lg min-[615px]:max-w-[90%] ">
+      <form action="" class="flex flex-col justify-center gap-3 md:gap-6 min-[1115px]:flex-row  min-[1115px]:items-end ">
+        <div class="input-form flex flex-col gap-2 relative md:after:content-['▼'] after:right-4 after:top-9 text-sm md:after:text-base md:after:top-12 md:after:right-3 after:absolute z-0">
           <label for="action" class="text-[#5F5E5E] font-medium text-sm md:text-base md:text-black">Action</label>
           <select name="action" id="action" class="bg-transparent border border-black appearance-none cursor-pointer rounded-lg py-2 px-4 md:rounded-xl  md:px-3 md:py-3 md:min-w-[188px] text-sm md:text-base">
             <option value="Buy" class="text-sm md:text-base">Buy</option>
@@ -62,7 +14,7 @@
             <option value="Sell" class="text-sm md:text-base">Sell</option>
           </select>
         </div>
-        <div class="input-form flex flex-col gap-2 relative after:content-['▼'] after:right-4 after:top-9 text-sm md:after:text-base md:after:top-12 md:after:right-3 after:absolute z-0">
+        <div class="input-form flex flex-col gap-2 relative md:after:content-['▼'] after:right-4 after:top-9 text-sm md:after:text-base md:after:top-12 md:after:right-3 after:absolute z-0">
           <label for="type" class="text-[#5F5E5E] font-medium text-sm md:text-base md:text-black">Type</label>
           <select name="type" id="type" class="bg-transparent border border-black appearance-none cursor-pointer rounded-lg py-2 px-4 md:rounded-xl  md:px-3 md:py-3 md:min-w-[188px] text-sm md:text-base">
             <option value="Villa">Villa</option>
@@ -74,7 +26,7 @@
           <label for="location" class="text-[#5F5E5E] font-medium text-sm md:text-base md:text-black">Location</label>
           <input type="text" id="location" name="location" class="bg-transparent border border-black appearance-none rounded-lg py-2 px-4 md:rounded-xl  md:px-3 md:py-3 md:min-w-[188px] text-sm md:text-base" value="Ubud">
         </div>
-        <div class="input-form flex flex-col gap-2 relative after:content-['▼'] after:right-4 after:top-9 text-sm md:after:text-base md:after:top-12 md:after:right-3 after:absolute z-0">
+        <div class="input-form flex flex-col gap-2 relative md:after:content-['▼'] after:right-4 after:top-9 text-sm md:after:text-base md:after:top-12 md:after:right-3 after:absolute z-0">
           <label for="location" class="text-[#5F5E5E] font-medium text-sm md:text-base md:text-black">Budget</label>
           <select name="location" id="location" class="bg-transparent border border-black appearance-none cursor-pointer rounded-lg py-2 px-4 md:rounded-xl  md:px-3 md:py-3 md:min-w-[188px] text-sm md:text-base">
             <option value="<$1000">Less $1000</option>
@@ -94,7 +46,7 @@
   {{-- end search-section --}}
 
   {{-- start our service --}}
-  <div class="our-service grid md:grid-cols-2 grid-cols-1 md:mt-48 mt-[350px] px-8 md:px-16 md:gap-x-32 md:gap-y-0 gap-y-6 max-w-[1920px] m-auto">
+  <div class="our-service grid md:grid-cols-2 grid-cols-1 md:mt-[35rem] min-[1115px]:mt-[180px] px-8 md:px-16 lg:gap-x-32 md:gap-x-16 md:gap-y-0 gap-y-6 max-w-[1920px] m-auto mt-80">
     <div class="service">
       <h1 class="font-georgia md:text-6xl text-3xl uppercase md:mb-8 mb-4 text-center md:text-left">Our service</h1>
       <p class="md:text-base text-xs md:mb-6 mb-4 md:leading-8 leading-6 text-justify">Serene Bali Offers many service that will help you find your dream house in Bali. We offers the villa with many concept that you wish. Our agent always ready to help you with your problem and will come up to a brilliant solution to guide you through your journey finding your dream house.</p>
@@ -196,11 +148,11 @@
           <a href="javascript:void(0)"><button class="gap-2 px-4 py-2 rounded-lg mt-3 text-sm md:text-base bg-[#445147] text-white">See More</button>
           </a>
         </div>
-        <div class="catalog grid md:grid-cols-3 md:gap-x-6 gap-y-4 grid-cols-1 md:pb-12">
+        <div class="catalog grid min-[1080px]:grid-cols-3 sm:grid-cols-2 sm:gap-x-3 md:gap-x-6 gap-y-4 grid-cols-1 md:pb-12">
           {{-- start property-card (should make component for this) --}}
           <a href="javascript:void(0)" class="md:max-w-full md:w-full bg-[#EAE6E3] rounded-md shadow-lg relative z-0 active:translate-y-2 hover:shadow-2xl transition duration-300">
             <span class="py-1 px-2 bg-white text-black rounded-lg text-xs md:text-base font-medium absolute md:top-4 md:left-4 top-2 left-2">Leasehold</span>
-            <img src="{{asset('storage/villa-nusa-dua.jpg')}}" alt="Villa terpopuler di bali" class="w-full max-h-[280px] object-cover">
+            <img src="{{asset('storage/villa-nusa-dua.jpg')}}" alt="Villa terpopuler di bali" class="w-full h-[270px] object-cover">
             <h3 class="font-medium md:text-2xl md:pt-6 md:px-6 px-4 pt-6 text-xl">Villa Nusa Dua</h3>
             <div class="facilities grid grid-cols-2 md:px-6 px-4 md:mt-4 md:mb-6 mt-2 mb-4 gap-y-2 gap-x-1 md:gap-y-4 md:gap-x-2">
               <div class="fac-wrapper flex items-center">
@@ -241,7 +193,7 @@
           {{-- end property-card --}}
           <a href="javascript:void(0)" class="md:max-w-full md:w-full bg-[#EAE6E3] rounded-md shadow-lg relative z-0 active:translate-y-2 hover:shadow-2xl transition duration-300">
             <span class="py-1 px-2 bg-white text-black rounded-lg text-xs md:text-base font-medium absolute md:top-4 md:left-4 top-2 left-2">Leasehold</span>
-            <img src="{{asset('storage/villa-ungasan.jpg')}}" alt="Villa terpopuler di bali" class="w-full max-h-[280px] object-cover">
+            <img src="{{asset('storage/villa-ungasan.jpg')}}" alt="Villa terpopuler di bali" class="w-full h-[270px] object-cover">
             <h3 class="font-medium md:text-2xl md:pt-6 md:px-6 px-4 pt-6 text-xl">Villa Ungasan</h3>
             <div class="facilities grid grid-cols-2 md:px-6 px-4 md:mt-4 md:mb-6 mt-2 mb-4 gap-y-2 gap-x-1 md:gap-y-4 md:gap-x-2">
               <div class="fac-wrapper flex items-center">
@@ -282,7 +234,7 @@
           {{-- end property-card --}}
           <a href="javascript:void(0)" class="md:max-w-full md:w-full bg-[#EAE6E3] rounded-md shadow-lg relative z-0 active:translate-y-2 hover:shadow-2xl transition duration-300">
             <span class="py-1 px-2 bg-white text-black rounded-lg text-xs md:text-base font-medium absolute md:top-4 md:left-4 top-2 left-2">Leasehold</span>
-            <img src="{{asset('storage/villa-canggu.jpg')}}" alt="Villa terpopuler di bali" class="w-full max-h-[280px] object-cover">
+            <img src="{{asset('storage/villa-canggu.jpg')}}" alt="Villa terpopuler di bali" class="w-full h-[270px] object-cover">
             <h3 class="font-medium md:text-2xl md:pt-6 md:px-6 px-4 pt-6 text-xl">Villa Canggu</h3>
             <div class="facilities grid grid-cols-2 md:px-6 px-4 md:mt-4 md:mb-6 mt-2 mb-4 gap-y-2 gap-x-1 md:gap-y-4 md:gap-x-2">
               <div class="fac-wrapper flex items-center">
@@ -330,16 +282,15 @@
   <div class="about-us-section grid grid-rows-1 px-8 md:px-14 max-w-[1920px] m-auto" id="about-us">
     <h1 class="font-georgia text-3xl md:text-6xl text-center uppercase md:mb-12 mb-6">About Us</h1>
     <div class="about-us-content flex flex-col gap-8 md:gap-14">
-      <div class="about-serene grid grid-cols-1 md:grid-cols-2 justify-items-center md:mt-12 mt-0">
+      <div class="about-serene grid grid-cols-1 md:grid-cols-2 md:gap-x-8 justify-items-center md:mt-12 mt-0 md:items-center">
         {{-- serene logo image --}}
         <img src="{{asset('storage/about-us-logo.png')}}" alt="Serene Image" class="w-[208px] md:w-[416px] lg:max-w-[500px]"> 
         <div class="description mt-6 md:mt-0">
           <h3 class="font-semibold md:text-4xl text-xl md:mb-6 mb-4 md:text-left text-center">What We Do?</h3>
-          <p class="md:text-base text-sm mb-4 md:mb-6 md:leading-8 leading-6 text-justify">Serene Bali Offers many service that will help you find your dream house in Bali. We offers the villa with many concept that you wish. Our agent always ready to help you with your problem and will come up to a brilliant solution to guide you through your journey finding your dream house.</p>
-          <p class="md:text-base text-sm md:leading-8 leading-6 text-justify">Serene Bali Offers many service that will help you find your dream house in Bali. We offers the villa with many concept that you wish. Our agent always ready to help you with your problem and will come up to a brilliant solution to guide you through your journey finding your dream house.</p>
+          <p class="md:text-base text-sm mb-4 md:mb-6 md:leading-8 leading-6 text-justify">Serene Bali Offers many service that will help you find your dream house in Bali. We offers the villa with many concept that you wish. Our agent always ready to help you with your problem and will come up to a brilliant solution to guide you through your journey finding your dream house.</p> 
         </div>
       </div>
-      <div class="about-serene grid grid-cols-1 md:grid-cols-2 justify-items-center">
+      <div class="about-serene grid grid-cols-1 md:grid-cols-2 md:gap-x-12 justify-items-center md:items-center">
         {{-- Team profile image --}}
         <div class="description max-w-[770px] order-last md:order-first">
           <h3 class="font-semibold md:text-4xl text-xl md:mb-6 mb-4 text-center md:text-left">Know Us Better</h3>
@@ -354,7 +305,7 @@
             </div>
           </div>
         </div>
-        <img src="{{asset('storage/teams.png')}}" alt="Team Profile" class="md:w-[600px] justify-self-end rounded-2xl shadow-md md:order-last order-first md:mb-0 mb-6 object-cover lg:max-w-[500px]"> 
+        <img src="{{asset('storage/know-us.jpg')}}" alt="Team Profile" class="md:w-[600px] rounded-2xl shadow-md md:order-last order-first md:mb-0 mb-6 object-cover justify-self-center md:max-h-[379px]"> 
       </div>
     </div>
   </div>
@@ -555,44 +506,4 @@
       </div>
     </div>
   </div>
-  {{-- end customer review --}}
-
-  {{-- start footer --}}
-  <footer class="grid md:grid-cols-2 grid-cols-1 max-w-[1920px] m-auto px-6 md:px-16 bg-[#445147] md:py-12 py-6 items-center md:justify-items-center">
-    <div class="left-footer order-last md:order-first">
-      <h2 class="font-semibold md:text-4xl hidden md:block max-w-[440px] text-white md:mb-6">Let's Find Your Dream House in Bali</h2>
-      <a href="javascript:void(0)" class="hidden md:block md:text-base text-sm text-[#445147] bg-white md:px-10 md:py-3 px-0 py-4 cursor-pointer text-center max-w-[150px] rounded-lg font-bold active:translate-y-1 hover:shadow-2xl transition duration-200"><button >Let's Go</button></a>
-      <div class="font-light md:text-base text-xs text-white md:mt-12">©️2024 Serene Bali. All Rights Reserved</div>
-    </div>
-    <div class="right-footer order-first md:order-last">
-      <div class="logo flex items-center md:gap-4 gap-2 md:mb-8 mb-6">
-        <img src="{{URL('storage/logo-white-serene.png')}}" alt="Serene Bali Logo" class="md:w-[19px] w-[14px]">
-        <a href="" class="md:text-base text-sm"><span class="font-bold text-white">S E R E N E</span> <span class="font-light text-white">Bali</span></a>
-      </div>
-      <div class="menu md:mb-8 mb-6">
-        <div class="md:text-base font-medium text-sm text-slate-400 md:mb-3">Menu</div>
-        <div class="list-menu flex md:gap-12 gap-4">
-          <a href="javascript:void(0)" class="md:text-base text-sm text-white">Buy</a>
-          <a href="javascript:void(0)" class="md:text-base text-sm text-white">Rent</a>
-          <a href="javascript:void(0)" class="md:text-base text-sm text-white">Consultation</a>
-          
-        </div>
-      </div>
-      <div class="social-media flex flex-col md:items-baseline md:m-0 mb-6 gap-4 ">
-        <h5 class="font-medium md:text-base text-sm text-white">Our Social Media</h5>
-        <div class="flex gap-6 flex-row">
-          <a target="_blank" href="https://www.facebook.com/profile.php?id=61555542423970"><img src="{{asset('storage/facebook-logo.png')}}" alt="Facebook Serene Bali" class="md:w-[50px] w-[30px]"></a>
-          <a target="_blank" href="https://api.whatsapp.com/message/YCS4YTQHFGEJL1?autoload=1&app_absent=0"><img src="{{asset('storage/whatsapp-logo.png')}}" alt="Whatsapp Serene Bali" class="md:w-[50px] w-[30px]"></a>
-          <a target="_blank" href="https://www.tiktok.com/@serenebali"><img src="{{asset('storage/tiktok-logo.png')}}" alt="Tiktok Serene Bali" class="md:w-[50px] w-[30px]"></a>
-          <a target="_blank" href="https://www.instagram.com/serenebali/"><img src="{{asset('storage/instagram-logo.png')}}" alt="Instagram Serene Bali" class="md:w-[50px] w-[30px]"></a>
-        </div>
-      
-    </div>
-  </footer>
-  
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
-  <script src="{{ asset('js/app.js') }}"></script>
-</body>
-</html>
-{{-- end footer --}}
+</x-landing-page-layout>
