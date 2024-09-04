@@ -1,4 +1,5 @@
-<x-landing-page-layout>
+<x-user-layout>
+  <x-slot:title>{{$title}}</x-slot:title>
    {{-- start search-section --}}
    <div class="search-section pt-20 px-8 max-h-[320px] md:py-5 md:pt-20 md:max-h-[450px] bg-no-repeat bg-cover w-full max-w-[1920px] m-auto" style="background-image:url({{asset('storage/hero-image.png')}})">
     <h1 class="text-white font-bold text-center m-auto text-xl md:text-5xl md:mt-16 md:max-w-[850px] md:leading-normal min-[500px]:text-2xl">Buy & Rent Villa Properties With Serene Bali</h1>
@@ -506,4 +507,4 @@
       </div>
     </div>
   </div>
-</x-landing-page-layout>
+</x-user-layout>

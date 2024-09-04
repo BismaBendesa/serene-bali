@@ -7,7 +7,7 @@
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   @vite('resources/css/app.css')
-  <title>Landing Page</title>
+  <title>{{ $title }}</title>
 </head>
 <body class="font-poppins m-auto bg-[#EAEAEA]">
   <x-nav-bar></x-nav-bar>

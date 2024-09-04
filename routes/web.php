@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\User\LoginController;
 use App\Http\Controllers\User\RegisterController;
+use App\Http\Controllers\User\DashboardController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,9 +17,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('landing-page');
-})->name('landing-page')->middleware('auth');
+Route::get('/', [LandingPageController::class, 'index'])->name('landing-page');
 
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenthicate'])->middleware('throttle:login');
@@ -27,9 +27,9 @@ Route::get('/register', [RegisterController::class, 'index'])->middleware('guest
 Route::post('/register', [RegisterController::class, 'store']);
 
 Route::get('/admin/dashboard', function () {
-    return view('admin.dashboard');
-})->middleware('auth', 'admin');
+    return view('admin.dashboard', [
+        'title' => 'Admin Dashboard'
+    ]);
+})->middleware('admin', 'auth');
 
-Route::get('/user/dashboard', function () {
-    return view('user.dashboard');
-})->middleware('auth', 'user');
+Route::get('/user/dashboard', [DashboardController::class, 'index'])->middleware('user', 'auth');
