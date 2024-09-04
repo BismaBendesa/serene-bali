@@ -6,11 +6,11 @@
     </div>
     {{-- Desktop nav --}}
     <nav class="gap-14 min-[800px]:flex hidden md:gap-8">
-      <a href="javascript:void(0)" class="text-base hover:font-bold transition-all delay-50">Buy</a>
-      <a href="javascript:void(0)" class="text-base hover:font-bold transition-all delay-50">Rent</a>
+      <a href="/user/dashboard" class="text-base hover:font-bold transition-all delay-50">Dashboard</a>
+      <a href="javascript:void(0)" class="text-base hover:font-bold transition-all delay-50">Property</a>
       <a href="javascript:void(0)" class="text-base hover:font-bold transition-all delay-50">Consultation</a>
       <a href="#about-us" class="text-base hover:font-bold transition-all delay-50">About</a>
-      <a href="#faqs" class="text-base hover:font-bold transition-all delay-50">FAQs</a>
+      <a href="#faqs" class="text-base hover:font-bold transition-all delay-50">Help & FAQs</a>
     </nav>
     {{-- maybe we need to know how to make this button as component --}}
     {{-- <a href="/login">
