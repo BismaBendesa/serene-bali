@@ -1,5 +1,5 @@
 {{-- start footer --}}
-<footer class="grid md:grid-cols-2 grid-cols-1 max-w-[1920px] m-auto px-6 md:px-16 bg-[#445147] md:py-12 py-6 items-center md:justify-items-center">
+<footer class="grid md:grid-cols-2 grid-cols-1 max-w-[1920px] m-auto px-6 md:px-16 bg-[#445147] md:py-12 py-6 items-center md:justify-items-center z-9 relative">
     <div class="left-footer order-last md:order-first">
       <h2 class="font-semibold md:text-4xl hidden md:block max-w-[440px] text-white md:mb-6">Let's Find Your Dream House in Bali</h2>
       <a href="javascript:void(0)" class="hidden md:block md:text-base text-sm text-[#445147] bg-white md:px-10 md:py-3 px-0 py-4 cursor-pointer text-center max-w-[150px] rounded-lg font-bold active:translate-y-1 hover:shadow-2xl transition duration-200"><button >Let's Go</button></a>

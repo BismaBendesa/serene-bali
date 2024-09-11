@@ -1,5 +1,5 @@
 {{-- start header --}}
-<header class="flex items-center justify-between w-full md:px-16 md:py-5 py-4 px-8 fixed z-50 bg-white md:left-0 md:right-0 m-auto max-w-[1920px] ">
+<header class="flex items-center justify-between w-full md:px-16 md:py-5 py-4 px-8 fixed z-50 bg-white md:left-0 md:right-0 m-auto max-w-[1920px] drop-shadow">
     <div class="logo flex items-center md:gap-4 gap-2">
       <img src="{{URL('storage/serene-bali-logo-black.png')}}" alt="Serene Bali Logo" class="md:w-[19px] w-[14px]">
       <a href="" class="md:text-base text-sm"><span class="font-bold">S E R E N E</span> <span class="font-light">Bali</span></a>
@@ -60,7 +60,7 @@
     </div>
     @else
     <a href="/login">
-      <button class="border border-black rounded-3xl px-6 py-2 font-medium text-base hover:bg-black hover:text-white transition-colors delay-50 min-[800px]:block hidden">Sign Up</button>
+      <button class="border border-black rounded-3xl px-6 py-2 font-medium text-base hover:bg-black hover:text-white transition-colors delay-50 min-[800px]:block hidden">Sign In</button>
     </a>
     @endauth
 

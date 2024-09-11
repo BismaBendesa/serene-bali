@@ -9,9 +9,10 @@
   @vite('resources/css/app.css')
   <title>{{ $title }}</title>
 </head>
-<body class="font-poppins m-auto bg-[#EAEAEA]">
+<body class="font-poppins m-auto bg-[#fff]">
   <x-nav-bar></x-nav-bar>
-  <main>
+  <img src="{{asset('storage/background.png')}}" alt="background" class="absolute left-[-112px] top-[-31px] z-0">
+  <main class="px-6 pt-16 md:px-16 z-9 relative">
     {{$slot}}
   </main>
 <x-footer></x-footer>

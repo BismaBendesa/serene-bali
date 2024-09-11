@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const rectTop = document.getElementById("rect-top");
     const rectBot = document.getElementById("rect-bottom");
     let click = 0;
-    const accordions = document.querySelector(".faqs-accordions");
+    // const accordions = document.querySelector(".faqs-accordions");
     const profilePic = document.getElementById("profileNav");
 
     burgerMenu.addEventListener("click", () => {
@@ -30,19 +30,19 @@ document.addEventListener("DOMContentLoaded", () => {
         // rectBot.classList.toggle("-rotate-45");
     });
 
-    accordions.addEventListener("click", (e) => {
-        if (e.target.tagName === "BUTTON") {
-            e.target.classList.toggle("dark:bg-[#445147]");
-            e.target.classList.toggle("bg-[#445147]");
-            e.target.classList.toggle("text-white");
-            e.target.classList.toggle("bg-white");
-            e.target.classList.toggle("bg-gray-100");
-            e.target.classList.toggle("text-gray-900");
-            e.target.classList.toggle("dark:bg-gray-800");
-            e.target.classList.toggle("dark:text-black");
-            e.target.classList.toggle("dark:text-gray-400");
-        }
-    });
+    // accordions.addEventListener("click", (e) => {
+    //     if (e.target.tagName === "BUTTON") {
+    //         e.target.classList.toggle("dark:bg-[#445147]");
+    //         e.target.classList.toggle("bg-[#445147]");
+    //         e.target.classList.toggle("text-white");
+    //         e.target.classList.toggle("bg-white");
+    //         e.target.classList.toggle("bg-gray-100");
+    //         e.target.classList.toggle("text-gray-900");
+    //         e.target.classList.toggle("dark:bg-gray-800");
+    //         e.target.classList.toggle("dark:text-black");
+    //         e.target.classList.toggle("dark:text-gray-400");
+    //     }
+    // });
 
     profilePic.addEventListener("click", (e) => {
         let dropdown;

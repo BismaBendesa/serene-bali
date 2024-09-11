@@ -32,4 +32,4 @@ Route::get('/admin/dashboard', function () {
     ]);
 })->middleware('admin', 'auth');
 
-Route::get('/user/dashboard', [DashboardController::class, 'index'])->middleware('user', 'auth');
+Route::get('/user/dashboard', [DashboardController::class, 'index'])->name('user-dashboard')->middleware('user', 'auth');

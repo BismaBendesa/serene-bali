@@ -33,7 +33,7 @@ class LoginController extends Controller
             $request->session()->regenerate();
 
             // redirect user to intended page.
-            return redirect()->intended('user.dashboard');
+            return redirect()->intended('user/dashboard');
         }
 
         // if false credentials then return some message
