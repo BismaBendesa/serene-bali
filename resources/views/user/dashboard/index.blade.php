@@ -149,9 +149,10 @@
         </div>
       </div>
     </div> --}}
+    {{-- lanjut bikin data fasilitas --}}
     <x-property-card :price="20000000" :discount="1">
-      <x-slot:property-name>Villa La Marina</x-slot:property-name>
-      <x-slot:property-label>Owned</x-slot:property-label>
+      <x-slot:propertyName>Villa La Marina</x-slot:propertyName>
+      <x-slot:propertyLabel>Owned</x-slot:propertyLabel>
       <x-slot:viewCount>293</x-slot:viewCount>
       <x-slot:propertyLocation>Jimbaran, Badung</x-slot:propertyLocation>
       <x-slot:propertyWidth>2930</x-slot:propertyWidth>

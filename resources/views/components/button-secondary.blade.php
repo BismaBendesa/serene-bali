@@ -6,4 +6,4 @@
     $buttonText = $buttonText ?? 'ButtonText';
     $buttonStyle = $buttonStyle ?? 'block'
 @endphp
-<button type="submit" class="bg-[#182955] text-white rounded drop-shadow {{$buttonStyle}}" title="{{$buttonTitle}}">{{$buttonText}}</button>
+<button type="submit" class="bg-white text-[#02205E] rounded drop-shadow border border-[#10398E] {{$buttonStyle}}" title="{{$buttonTitle}}">{{$buttonText}}</button>

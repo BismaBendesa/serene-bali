@@ -7,7 +7,7 @@
     {{-- Desktop nav --}}
     <nav class="gap-14 min-[800px]:flex hidden md:gap-8">
       <a href="/user/dashboard" class="text-base hover:font-bold transition-all delay-50">Dashboard</a>
-      <a href="javascript:void(0)" class="text-base hover:font-bold transition-all delay-50">Property</a>
+      <a href="/user/property" class="text-base hover:font-bold transition-all delay-50">Property</a>
       <a href="javascript:void(0)" class="text-base hover:font-bold transition-all delay-50">Consultation</a>
       <a href="#about-us" class="text-base hover:font-bold transition-all delay-50">About</a>
       <a href="#faqs" class="text-base hover:font-bold transition-all delay-50">Help & FAQs</a>
@@ -29,7 +29,7 @@
       </svg>
       {{-- profile picture--}}
       <div class="ml-4 cursor-pointer relative" id="profileNav">
-        <img src="{{ asset('storage/default-pfp.jpg')}}" alt="profile picture" class="w-10 h-10 rounded-full border border-[#cacaca] drop-shadow-sm">
+        <img src="{{ asset('storage/default-pfp.jpg')}}" alt="profile picture" class="w-8 h-8 rounded-full border border-[#cacaca] drop-shadow-sm">
         {{-- dropdown profile desktop --}}
         <div class="absolute inline-block text-left right-0 drop-shadow-md border border-color-[#182955] md:hidden transition ease-in duration-75" id="profileDrop">        
           <!--
