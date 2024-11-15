@@ -40,3 +40,4 @@ Route::get('/user/property/search', [PropertyController::class, 'search'])->name
 
 
 Route::get('/user/property/{id}', [PropertyController::class, 'show'])->name('property-details')->middleware('user', 'auth');
+Route::get('/user/property/{id}/gallery', [PropertyController::class, 'gallery'])->name('property-gallery')->middleware('user', 'auth');

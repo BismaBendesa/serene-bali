@@ -27,7 +27,6 @@ class PropertyController extends Controller
 
   public function show($id)
   {
-
     $property = Property::find($id);
     $property->increment('views');
 
@@ -91,6 +90,14 @@ class PropertyController extends Controller
       'title' => 'Property Catalog',
       'catalogCardData' => $properties,
       'oldInputs' => $validated,
+    ]);
+  }
+  public function gallery($id)
+  {
+    $property = Property::find($id);
+    return view('user.property.gallery', [
+      'title' => 'Property Gallery',
+      'property' => $property
     ]);
   }
 }

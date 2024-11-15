@@ -22,7 +22,9 @@
         <div class="md:w-full relative h-full max-h-[14rem]">
           <img src="{{asset('storage/property-night.png')}}" alt="property-front-view" class="rounded-md object-cover h-full">
           {{-- below onclick to gallery --}}
-          <div class="absolute bg-zinc-950/60 inset-0 rounded-md text-4xl backdrop-blur-sm text-white flex justify-center items-center font-bold cursor-pointer">15+</div>
+          <a href="{{ $property->id ."/gallery"}}">
+            <div class="absolute bg-zinc-950/60 inset-0 rounded-md text-4xl backdrop-blur-sm text-white flex justify-center items-center font-bold cursor-pointer">15+</div>
+          </a>
           {{-- above onclick to gallery --}}
         </div>
       </div>

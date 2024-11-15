@@ -17,8 +17,13 @@ Breadcrumbs::for('property-catalog', function (BreadcrumbTrail $trail) {
 });
 
 Breadcrumbs::for('property-details', function (BreadcrumbTrail $trail, $property) {
-  $trail->parent('property-catalog');
-  $trail->push('Property Details', route('property-details', $property->id));
+  $trail->parent('property-catalog',);
+  $trail->push('Property Details', route('property-details', $property));
+});
+
+Breadcrumbs::for('property-gallery', function (BreadcrumbTrail $trail, $property) {
+  $trail->parent('property-details', $property->id);
+  $trail->push('Property Gallery', route('property-gallery', $property));
 });
 
 // Breadcrumbs::for('blog', function (BreadcrumbTrail $trail) {

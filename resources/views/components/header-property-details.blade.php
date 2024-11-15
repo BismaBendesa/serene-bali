@@ -1,4 +1,4 @@
-<div class="md:mt-2 mb-6 max-w-[1920px] mx-auto">
+<div class="md:mt-6 mb-6 max-w-[1920px] mx-auto">
   <span class="text-sm text-[#858381]">{{ Breadcrumbs::render($breadcrumbs, $variable)}}</span>
   <div class="md:flex md:items-center justify-between">
     <div class="flex items-center mt-2">
