@@ -5,7 +5,7 @@
     :variable=$property
   />
 
-  <div class="img-preview grid md:grid-cols-5 grid-cols-1 w-full md:gap-6 gap-y-6 mb-4 md:max-h-[24rem]">
+  <div class="img-preview grid md:grid-cols-5 grid-cols-1 w-full md:gap-6 gap-y-6 mb-4 md:max-h-[24rem] max-w-[1920px] mx-auto">
     <div class="col-span-3">
       <div class="w-full h-[24rem]">
         <img src="{{asset('storage/property-front-view.png')}}" alt="property-front-view" class="w-full h-full rounded-md object-cover">
@@ -29,7 +29,7 @@
     </div>
   </div>
 
-  <div class="contact flex gap-6 items-center pb-4 flex-wrap">
+  <div class="contact flex gap-6 items-center pb-4 flex-wrap max-w-[1920px] mx-auto">
     <div class="p-2 bg-[#02205E] text-white rounded font-medium text-sm">Leasehold</div>
     <div class="flex align-items-start flex-wrap md:gap-6 gap-2">
       <div class="flex gap-2 items-center justify-center">
@@ -43,7 +43,7 @@
     </div>
   </div>
 
-  <div class="tab-bar md:my-6 my-4">
+  <div class="tab-bar md:my-6 my-4 mx-auto max-w-[1920px]">
     <div class="tab-menus flex md:gap-12 gap-8 border-b-2 border-[#E8E8E8] overflow-x-auto md:px-0 px-1">
       <x-tab-menu 
         menuName="Available Date"
@@ -65,7 +65,7 @@
   </div>
 
   <div class="details section mb-6">
-    <div class="grid grid-cols-5 gap-8">
+    <div class="grid grid-cols-5 gap-8 mx-auto max-w-[1920px]">
       <div class="status col-span-3">
         <div class="available-date mb-4" data-content="Available Date">
           <div class="flex gap-2 items-center text-xl font-semibold">
