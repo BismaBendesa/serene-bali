@@ -12,6 +12,15 @@ Breadcrumbs::for('user-dashboard', function (BreadcrumbTrail $trail) {
   $trail->push('Dashboard', route('user-dashboard'));
 });
 
+Breadcrumbs::for('property-catalog', function (BreadcrumbTrail $trail) {
+  $trail->push('Search Property', route('property-catalog'));
+});
+
+Breadcrumbs::for('property-details', function (BreadcrumbTrail $trail, $property) {
+  $trail->parent('property-catalog');
+  $trail->push('Property Details', route('property-details', $property->id));
+});
+
 // Breadcrumbs::for('blog', function (BreadcrumbTrail $trail) {
 //   $trail->parent('user-dashboard');
 //   $trail->push('Blog', route('landing-page'));
