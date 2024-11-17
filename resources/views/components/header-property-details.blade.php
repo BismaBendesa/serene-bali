@@ -2,7 +2,7 @@
   <span class="text-sm text-[#858381]">{{ Breadcrumbs::render($breadcrumbs, $variable)}}</span>
   <div class="md:flex md:items-center justify-between">
     <div class="flex items-center mt-2">
-      <div class="rounded-full border border-[#61605E] text-[#61605E] flex w-10 h-10 justify-center items-center mr-4">
+      <div class="rounded-full border border-[#61605E] text-[#61605E] flex w-10 h-10 justify-center items-center mr-4 cursor-pointer" onclick="history.back()">
         <span class="material-symbols-rounded">
           arrow_back
         </span>
