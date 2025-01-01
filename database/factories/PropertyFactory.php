@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Faker\Factory as FakerFactory;
+use app\models\PropertyType;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Property>
@@ -21,7 +22,7 @@ class PropertyFactory extends Factory
         return [
             'property_name' => $faker->country(),
             'property_service' => $faker->randomElement(['freehold', 'leasehold']),
-            'property_type' => $faker->randomElement(['villa', 'homestay', 'land']),
+            'fk_property_type_id' => PropertyType::inRandomOrder()->value('id'), // Random existing ID,
             'description' => $faker->paragraph(),
             'land_area' => $faker->randomDigit([1000, 5000]),
             'building_area' => $faker->randomDigit([1000, 5000]),

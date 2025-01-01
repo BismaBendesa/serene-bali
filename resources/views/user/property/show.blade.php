@@ -203,6 +203,7 @@
           </div>
           <div class="location-row mb-6">
             <h4 class="text-xl mb-3 font-medium">Google Map Links</h4>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7913.639524300871!2d107.4924848!3d-7.3740883!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e689cc385c088e9%3A0x43591a92ce357eab!2sKoramil%20CISEWU!5e0!3m2!1sid!2sid!4v1735725861533!5m2!1sid!2sid" width="90%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             <a href="https://maps.app.goo.gl/GGUvCigDAp3QairLA" class="underline hover:text-[#10398E]">https://maps.app.goo.gl/GGUvCigDAp3QairLA</a>
           </div>
           <div class="location-row mb-6">

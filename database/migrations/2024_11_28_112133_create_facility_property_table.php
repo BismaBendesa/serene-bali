@@ -13,13 +13,15 @@ return new class extends Migration
     {
         Schema::create('facility_property', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('id_facility');
-            $table->unsignedBigInteger('id_property');
+            $table->unsignedBigInteger('fk_facility_id')->nullable();
+            $table->unsignedBigInteger('fk_property_id');
             $table->string('amount');
             $table->string('detail');
             $table->timestamps();
-            $table->foreign('id_facility')->references('id')->on('facility');
-            $table->foreign('id_property')->references('id')->on('properties');
+
+
+            $table->foreign('fk_facility_id')->references('id')->on('facilities')->onDelete("set null");
+            $table->foreign('fk_property_id')->references('id')->on('properties')->onDelete('cascade');
         });
     }
 

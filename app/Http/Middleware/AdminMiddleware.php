@@ -22,6 +22,6 @@ class AdminMiddleware
             }
         }
 
-        return to_route('landing-page');
+        return to_route('admin-dashboard');
     }
 }

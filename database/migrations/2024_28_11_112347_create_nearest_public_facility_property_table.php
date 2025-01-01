@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('location_link');
 
             $table->foreign('public_facility_id')->references('id')->on('nearest_public_facility');
-            $table->foreign('property_id')->references('id')->on('properties');
+            $table->foreign('property_id')->references('id')->on('properties')->onDelete('cascade');
             $table->timestamps();
         });
     }

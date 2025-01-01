@@ -13,10 +13,9 @@ return new class extends Migration
     {
         Schema::create('properties', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('fk_property_type_id');
+            $table->unsignedBigInteger('fk_property_type_id')->nullable();
             $table->string('property_name');
             $table->string('property_service');
-            $table->string('property_type');
             $table->text('description');
             $table->decimal('land_area', 10, 2);
             $table->decimal('building_area', 10, 2);
