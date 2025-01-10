@@ -22,6 +22,7 @@
       <div class="hidden md:flex absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
         <button class="text-white text-sm font-medium bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg">View Property</button>
       </div>
+      {{-- Nonactive Property Overlay --}}
     </a>
 
     <span class="bg-[#02205E] text-white text-sm font-medium rounded-md drop-shadow px-1.5 py-1.5 absolute left-[10px] top-[10px] capitalize">{{ $propertyLabel}}</span>

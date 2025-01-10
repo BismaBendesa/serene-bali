@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
+use App\Http\Controllers\Admin\PropertyController as AdminPropertyController;
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\User\LoginController;
 use App\Http\Controllers\User\RegisterController;
@@ -27,11 +29,8 @@ Route::post('/logout', [LoginController::class, 'logout']);
 Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
 Route::post('/register', [RegisterController::class, 'store']);
 
-Route::get('/admin/dashboard', function () {
-    return view('admin.dashboard', [
-        'title' => 'Admin Dashboard'
-    ])->name('admin-dashboard');
-})->middleware('admin', 'auth');
+Route::get('/admin/dashboard', [AdminDashboardController::class, 'index'])->name('admin-dashboard')->middleware('admin', 'auth');
+Route::get('/admin/property', [AdminPropertyController::class, 'index'])->name('admin-property')->middleware('admin', 'auth');
 
 // user routes
 Route::get('/user/dashboard', [DashboardController::class, 'index'])->name('user-dashboard')->middleware('user', 'auth');

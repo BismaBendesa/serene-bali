@@ -9,6 +9,7 @@
     let currentElementDetail;
     currentElementDetail = document.querySelector(`[data-content="${element.textContent}"]`)
 
+    // this could be a bug in the future
     const allElementDetail = document.querySelectorAll('[data-content]')
 
 
@@ -19,6 +20,8 @@
     const description = document.querySelector('.description');
     const facility = document.querySelector('.facility');
     const location = document.querySelector('.location');
+    const activeProperty = document.querySelector('.active-property')
+    const nonactiveProperty = document.querySelector('.nonactive-property')
     
 
     // Get all tab elements
@@ -49,6 +52,10 @@
       facility.classList.toggle('hidden')
     } else if (element.textContent === 'Location'){
       location.classList.toggle('hidden')
+    } else if (element.textContent === 'Active Property'){
+      activeProperty.classList.toggle('hidden')
+    } else if (element.textContent === 'Nonactive Property'){
+      nonactiveProperty.classList.toggle('hidden')
     }
   }
 </script>

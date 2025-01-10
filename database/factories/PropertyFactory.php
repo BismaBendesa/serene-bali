@@ -31,6 +31,7 @@ class PropertyFactory extends Factory
             'address' => $faker->address(),
             'address_link' => $faker->address(),
             'property_status' => $faker->randomElement(['on_sale', 'waiting_for_payment', 'payment_successfull', 'admin_verification', 'done']),
+            'activation_status' => $faker->boolean(),
             'view_count' => 0,
             'price' => $faker->randomNumber(),
             'ambience' => $faker->randomElement(['Beach & Chill', 'Nature & Quiet', 'Summer Vibes', 'Far From Town']),

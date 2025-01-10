@@ -12,6 +12,14 @@ Breadcrumbs::for('user-dashboard', function (BreadcrumbTrail $trail) {
   $trail->push('Dashboard', route('user-dashboard'));
 });
 
+Breadcrumbs::for('admin-dashboard', function (BreadcrumbTrail $trail) {
+  $trail->push('Admin Dashboard', route('admin-dashboard'));
+});
+
+Breadcrumbs::for('admin-property', function (BreadcrumbTrail $trail) {
+  $trail->push('Admin Property', route('admin-property'));
+});
+
 Breadcrumbs::for('property-catalog', function (BreadcrumbTrail $trail) {
   $trail->push('Search Property', route('property-catalog'));
 });

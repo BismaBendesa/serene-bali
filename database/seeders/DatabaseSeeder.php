@@ -7,6 +7,7 @@ use Illuminate\Database\Seeder;
 use App\models\Property;
 use App\models\PropertyType;
 use App\Models\Facility;
+use App\Models\User;
 
 class DatabaseSeeder extends Seeder
 {
@@ -15,6 +16,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        // create default admin
+        User::factory()->admin()->create();
+
         // create 4 property types
         PropertyType::factory(4)->create();
 

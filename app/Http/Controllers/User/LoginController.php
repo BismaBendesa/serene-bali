@@ -32,8 +32,15 @@ class LoginController extends Controller
             // create new session for user prevent csrf
             $request->session()->regenerate();
 
-            // redirect user to intended page.
-            return redirect()->intended('user/dashboard');
+            $user = Auth::user(); // get authenthicated user 
+
+            // redirect user based on their role.
+            if ($user->role === 'admin') {
+                return redirect()->intended('admin/dashboard');
+            } elseif ($user->role === 'user') {
+                // redirect user to intended page.
+                return redirect()->intended('user/dashboard');
+            }
         }
 
         // if false credentials then return some message
