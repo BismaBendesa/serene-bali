@@ -11,11 +11,12 @@
     $price = $price ?? 0;
     $discount = $discount ?? 0;
     $promoPrice = $price - (($price / 100) * $discount)  ?? 0;
-    $hideStrikedPrice = $discount == 0 ? 'hidden' : 'block' // can use hidden or block
+    $hideStrikedPrice = $discount == 0 ? 'hidden' : 'block'; // can use hidden or block
+    $activeProperty = $activeProperty ?? true;
 @endphp
 
 
-  <div class="property-card flex w-full border border-[#cacaca] rounded-lg drop-shadow bg-[#F8F8F8] my-4 md:flex-col ">
+  <div x-data="{active: @json($activeProperty)}" class="property-card flex w-full border border-[#cacaca] rounded-lg drop-shadow bg-[#F8F8F8] my-4 md:flex-col ">
     <a href="{{ '/user/property/'. $property}}" class="group relative" draggable="false">
       <img src="{{asset('storage/villa-sample.png')}}" alt="property card" class="max-w-[160px] top-0 bottom-0 h-full object-cover rounded-lg md:max-w-full relative grow-0" draggable="false">
       {{-- Overlay --}}
@@ -23,6 +24,7 @@
         <button class="text-white text-sm font-medium bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg">View Property</button>
       </div>
       {{-- Nonactive Property Overlay --}}
+      <div x-text="active ? 'Active Property' : 'Nonactive Property'" x-bind:class="active ? 'bg-[#10398E]/50' : 'bg-[#D60E00]/50' " class="bg-[#17142D]/50 backdrop-blur p-2 rounded text-white absolute bottom-0.5 text-xs">Nonactive Property</div>
     </a>
 
     <span class="bg-[#02205E] text-white text-sm font-medium rounded-md drop-shadow px-1.5 py-1.5 absolute left-[10px] top-[10px] capitalize">{{ $propertyLabel}}</span>
