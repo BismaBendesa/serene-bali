@@ -1,3 +1,8 @@
+// add these files bellow
+import Alpine from "alpinejs";
+window.Alpine = Alpine;
+Alpine.start();
+
 // Event global
 document.addEventListener("DOMContentLoaded", () => {
     const burgerMenu = document.getElementById("burgerButton");

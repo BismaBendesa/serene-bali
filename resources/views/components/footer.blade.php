@@ -32,7 +32,7 @@
   </footer>
   
 
-    <script src="{{ asset('./js/app.js') }}"></script>
+    <script defer src="{{ asset('./js/app.js') }}" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 </html>
 {{-- end footer --}}
