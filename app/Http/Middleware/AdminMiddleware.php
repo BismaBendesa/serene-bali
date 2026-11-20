@@ -20,8 +20,11 @@ class AdminMiddleware
             if (auth()->user()->role === 'admin') {
                 return $next($request);
             }
+
+            // logged in but not an admin: send them to their own dashboard
+            return to_route('user-dashboard');
         }
 
-        return to_route('admin-dashboard');
+        return to_route('login');
     }
 }

@@ -57,11 +57,16 @@ class PropertyController extends Controller
     // $duration = $validated['duration'] ?? null;
     // $start_date = $validated['$start_date'] ?? null;
 
-    // Split the budget into min and max value
+    // Split the budget ("min-max") into min and max value
+    $minPrice = null;
+    $maxPrice = null;
     if ($budget) {
-      $budgetRange = explode('-', $budget);
-      $minPrice = $budgetRange[0];
-      $maxPrice = $budgetRange[1];
+      $budgetRange = explode('-', $budget, 2);
+      if (count($budgetRange) === 2 && is_numeric($budgetRange[0]) && is_numeric($budgetRange[1])) {
+        [$minPrice, $maxPrice] = $budgetRange;
+      } else {
+        $budget = null; // ignore a malformed budget instead of erroring
+      }
     }
 
     // Set Empty for "Any" filter in ambience
