@@ -78,8 +78,8 @@
           <option value="10000000-50000000" {{($oldInputs['budget'] ?? '') == '10000000-50000000' ? 'selected' : ''}}>IDR 10 Million - IDR 50 Million</option>
           <option value="50000000-200000000" {{($oldInputs['budget'] ?? '') == '50000000-200000000' ? 'selected' : ''}}>IDR 50 Million - IDR 200 Million</option>
           <option value="200000000-800000000" {{($oldInputs['budget'] ?? '') == '200000000-800000000' ? 'selected' : ''}}>IDR 200 Million - IDR 800 Million</option>
-          <option value="800000000-2000000000000" {{($oldInputs['budget'] ?? '') == '800000000-2000000000000' ? 'selected' : ''}}>IDR 800 Million - IDR 2 Billion</option>
-          <option value="2000000000000-9999999999" {{($oldInputs['budget'] ?? '') == '2000000000000-9999999999 ' ? 'selected' : ''}}>IDR 2 Billion More ></option>
+          <option value="800000000-2000000000" {{($oldInputs['budget'] ?? '') == '800000000-2000000000' ? 'selected' : ''}}>IDR 800 Million - IDR 2 Billion</option>
+          <option value="2000000000-9999999999999" {{($oldInputs['budget'] ?? '') == '2000000000-9999999999999' ? 'selected' : ''}}>IDR 2 Billion More ></option>
         </select>
       </div>
       
